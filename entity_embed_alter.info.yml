@@ -1,0 +1,4 @@
+name: entity_embed_alter
+type: module
+description: A module for altering the entity embed widget
+core: 8.x

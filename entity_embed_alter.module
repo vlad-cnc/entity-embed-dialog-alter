@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements the widget alters.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+
+function entity_embed_alter_form_entity_embed_dialog_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+
+
+  $entity_element = [
+    'data-entity-embed-display' => 'image:image',
+    'image_style' => 'image:image',
+  ];
+  $form_state->set('entity_element', $entity_element);
+
+  $form['attributes']['data-entity-embed-display-settings']['image_style']['#options']  = array(
+    'style_machine_name' => 'Style Name (800 x 800)',
+  );
+}
